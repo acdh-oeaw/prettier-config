@@ -1,0 +1,12 @@
+{
+	"name": "@acdh-ch/prettier-config",
+	"version": "0.1.0",
+	"license": "MIT",
+	"main": "index.js",
+	"devDependencies": {
+		"prettier": "^2.7.1"
+	},
+	"peerDependencies": {
+		"prettier": "2.x || 3.x"
+	}
+}
