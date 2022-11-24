@@ -110,6 +110,10 @@ You may also want to enable "Format on Save" in `.vscode/settings.json`:
 }
 ```
 
+### WebStorm
+
+Follow the instructions in the [WebStorm docs](https://www.jetbrains.com/help/webstorm/prettier.html).
+
 ## How to adjust tab width
 
 We use tabs, not spaces, for indentation because of their accessibility benefits. Users are then
