@@ -1,5 +1,5 @@
 {
-	"name": "@acdh-ch/prettier-config",
+	"name": "@acdh-oeaw/prettier-config",
 	"version": "0.1.0",
 	"license": "MIT",
 	"main": "index.js",
