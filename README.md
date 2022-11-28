@@ -129,7 +129,7 @@ To ship this config with your project, commit/include the `prettier.xml` in your
   <component name="PrettierConfiguration">
     <option name="myRunOnSave" value="true" />
     <option name="myRunOnReformat" value="true" />
-    <option name="myFilesPattern" value="{**/*,*}.{js,json,ts,jsx,tsx,vue}" />
+    <option name="myFilesPattern" value="{**/*,*}.{js,json,ts,jsx,tsx,vue,css,scss,sass}" />
   </component>
 </project>
 ```
