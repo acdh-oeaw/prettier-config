@@ -1,18 +1,18 @@
-# ACDH-CH prettier config
+# acdh-oeaw prettier config
 
 Shared configuration preset for [`prettier`](https://prettier.io/).
 
 ## How to install
 
 ```bash
-npm install -D prettier @acdh-ch/prettier-config
+npm install -D prettier @acdh-oeaw/prettier-config
 ```
 
 Add the config to `package.json`:
 
 ```json
 {
-	"prettier": "@acdh-ch/prettier-config"
+	"prettier": "@acdh-oeaw/prettier-config"
 }
 ```
 
@@ -20,7 +20,7 @@ If you absolutely need to extend the shared config, create a `.prettierrc.js` fi
 folder of your project:
 
 ```js
-const sharedConfig = require("@acdh-ch/prettier-config");
+const sharedConfig = require("@acdh-oeaw/prettier-config");
 
 const config = {
 	...sharedConfig,
