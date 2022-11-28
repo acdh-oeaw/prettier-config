@@ -112,9 +112,9 @@ You may also want to enable "Format on Save" in `.vscode/settings.json`:
 
 ### WebStorm
 
-The Webstorm default installation should already contain the [JetBrains Prettier plugin](https://plugins.jetbrains.com/plugin/10456-prettier).
+The WebStorm default installation should already contain the [JetBrains Prettier plugin](https://plugins.jetbrains.com/plugin/10456-prettier).
 
-If you install this acdh config via the embedded terminal (<kbd>Alt</kbd>+<kbd>F12</kbd>) as suggested [here](#how-to-install) the plugin should configure itself automagically. Alternately you may adjust it's settings via the *Settings/Preferences* dialog (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>), under *Languages & Frameworks | JavaScript | Prettier* . It's  highly recommended to check both *On code reformat* and *On Save* there as well. (See [this section](#how-to-auto-format-with-git-hooks) for alternate/additional automation possibilities).
+If you install this acdh config via the embedded terminal (<kbd>Alt</kbd>+<kbd>F12</kbd>) as suggested [here](#how-to-install) the plugin should configure itself automagically. Alternately you may adjust its settings via the *Settings/Preferences* dialog (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>), under *Languages & Frameworks | JavaScript | Prettier* . It's  highly recommended to check both *On code reformat* and *On Save* there as well. (See [this section](#how-to-auto-format-with-git-hooks) for alternate/additional automation possibilities).
 
 By default the set [glob pattern](https://github.com/isaacs/node-glob#glob-primer) will only match JavaScript, TypeScript, JSX and TSX files. Depending on your stack it's recommended to extend it to
 
