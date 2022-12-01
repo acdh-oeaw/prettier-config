@@ -9,6 +9,14 @@ const config = {
 	tabWidth: 2,
 	trailingComma: "all",
 	useTabs: true,
+	overrides: [
+		{
+			files: ["*.vue"],
+			options: {
+				htmlWhitespaceSensitivity: "ignore",
+			},
+		},
+	],
 };
 
 module.exports = config;
