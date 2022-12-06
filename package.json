@@ -3,10 +3,29 @@
 	"version": "0.1.0",
 	"license": "MIT",
 	"main": "index.js",
-	"devDependencies": {
-		"prettier": "^2.7.1"
+	"scripts": {
+		"format": "prettier . --cache --check --ignore-path .gitignore",
+		"format:fix": "pnpm run format --write",
+		"prepare": "pnpm run setup",
+		"setup": "simple-git-hooks || exit 0",
+		"validate": "pnpm run format"
 	},
 	"peerDependencies": {
 		"prettier": "2.x || 3.x"
+	},
+	"devDependencies": {
+		"lint-staged": "^13.1.0",
+		"prettier": "^2.8.0",
+		"simple-git-hooks": "^2.8.1"
+	},
+	"lint-staged": {
+		"*": [
+			"prettier --cache --write"
+		]
+	},
+	"prettier": "./index.js",
+	"simple-git-hooks": {
+		"pre-commit": "pnpm exec lint-staged",
+		"pre-push": "pnpm run validate"
 	}
 }
