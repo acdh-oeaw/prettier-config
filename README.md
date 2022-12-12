@@ -112,16 +112,26 @@ You may also want to enable "Format on Save" in `.vscode/settings.json`:
 
 ### WebStorm
 
-The WebStorm default installation should already contain the [JetBrains Prettier plugin](https://plugins.jetbrains.com/plugin/10456-prettier).
+The WebStorm default installation should already contain the
+[JetBrains Prettier plugin](https://plugins.jetbrains.com/plugin/10456-prettier).
 
-If you install this acdh config via the embedded terminal (<kbd>Alt</kbd>+<kbd>F12</kbd>) as suggested [here](#how-to-install) the plugin should configure itself automagically. Alternately you may adjust its settings via the *Settings/Preferences* dialog (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>), under *Languages & Frameworks | JavaScript | Prettier* . It's  highly recommended to check both *On code reformat* and *On Save* there as well. (See [this section](#how-to-auto-format-with-git-hooks) for alternate/additional automation possibilities).
+If you install this acdh config via the embedded terminal (<kbd>Alt</kbd>+<kbd>F12</kbd>) as
+suggested [here](#how-to-install) the plugin should configure itself automagically. Alternately you
+may adjust its settings via the _Settings/Preferences_ dialog
+(<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>), under _Languages & Frameworks | JavaScript |
+Prettier_ . It's highly recommended to check both _On code reformat_ and _On Save_ there as well.
+(See [this section](#how-to-auto-format-with-git-hooks) for alternate/additional automation
+possibilities).
 
-By default the set [glob pattern](https://github.com/isaacs/node-glob#glob-primer) will only match JavaScript, TypeScript, JSX and TSX files. Depending on your stack it's recommended to extend it to
+By default the set [glob pattern](https://github.com/isaacs/node-glob#glob-primer) will only match
+JavaScript, TypeScript, JSX and TSX files. Depending on your stack it's recommended to extend it to
 
 ```glob
 {**/*,*}.{js,json,ts,jsx,tsx,vue}
 ```
-To ship this config with your project, commit/include the `prettier.xml` in your `.idea` config folder:
+
+To ship this config with your project, commit/include the `prettier.xml` in your `.idea` config
+folder:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -134,7 +144,9 @@ To ship this config with your project, commit/include the `prettier.xml` in your
 </project>
 ```
 
-For more detailed instructions see the WebStorm docs on [Prettier](https://www.jetbrains.com/help/webstorm/prettier.html) and [Vue.js formatting](https://www.jetbrains.com/help/webstorm/vue-js.html#ws_vue_formatting)
+For more detailed instructions see the WebStorm docs on
+[Prettier](https://www.jetbrains.com/help/webstorm/prettier.html) and
+[Vue.js formatting](https://www.jetbrains.com/help/webstorm/vue-js.html#ws_vue_formatting)
 
 ## How to adjust tab width
 
