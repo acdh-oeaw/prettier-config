@@ -159,3 +159,7 @@ after committing it, to allow for individual `indent_size` preferences.
 
 On <https://github.com> you can adjust the tab width in the
 [appearance settings](https://github.com/settings/appearance#tab-size-heading).
+
+In your terminal, you should be able to use the `tabs` command to set tab width, e.g. `tabs 4`.
+
+For the output of `git diff`, you need to adjust the tab width of your pager. When using the default `less`, you can set `git config --global core.pager 'less -x4'`.
