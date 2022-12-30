@@ -44,14 +44,14 @@ Add a script to `package.json`:
 ```json
 {
 	"scripts": {
-		"format": "prettier . --cache --check --ignore-path .gitignore",
-		"format:fix": "npm run format -- --write"
+		"format:check": "prettier . --cache --check --ignore-path .gitignore",
+		"format:fix": "npm run format:check -- --write"
 	}
 }
 ```
 
-You can then run `npm run format` to check code formatting, and `npm run format:fix` to auto-fix
-formatting errors.
+You can then run `npm run format:check` to check code formatting, and `npm run format:fix` to
+auto-fix formatting errors.
 
 ## How to auto-format with Git hooks
 
@@ -65,8 +65,8 @@ To auto-format on every Git commit, and to check formatting on every Git push, a
 ```json
 {
 	"scripts": {
-		"format": "prettier . --cache --check --ignore-path .gitignore",
-		"format:fix": "npm run format -- --write",
+		"format:check": "prettier . --cache --check --ignore-path .gitignore",
+		"format:fix": "npm run format:check -- --write",
 		"prepare": "npm run setup",
 		"setup": "simple-git-hooks || exit 0",
 		"validate": "npm run format"
@@ -151,15 +151,25 @@ For more detailed instructions see the WebStorm docs on
 ## How to adjust tab width
 
 We use tabs, not spaces, for indentation because of their accessibility benefits. Users are then
-free to configure their preferred tab width in their text editors. If you want to provide a shared
-default tab width, consider adding a [`.editorconfig`](https://editorconfig.org/) file to the root
-of your project, which will be read by most editors automatically (in VS Code you will need to
-install the `editorconfig.editorconfig` plugin). You should also add `.editorconfig` to `.gitignore`
-after committing it, to allow for individual `indent_size` preferences.
+free to configure their preferred tab width in their text editors.
+
+Adding an [`.editorconfig`](https://editorconfig.org/) file to the root of a project provides a way
+to adjust the tab width, which is understood by most text editors automatically (VS Code requires a
+[separate plugin](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)).
+
+In VS Code, you can adjust the tab width by changing the following in a user's `settings.json`:
+
+```json
+{
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2
+}
+```
 
 On <https://github.com> you can adjust the tab width in the
 [appearance settings](https://github.com/settings/appearance#tab-size-heading).
 
 In your terminal, you should be able to use the `tabs` command to set tab width, e.g. `tabs 4`.
 
-For the output of `git diff`, you need to adjust the tab width of your pager. When using the default `less`, you can set `git config --global core.pager 'less -x4'`.
+For the output of `git diff`, you need to adjust the tab width of your pager. When using the default
+`less`, you can set `git config --global core.pager 'less -x4'`.
