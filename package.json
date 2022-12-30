@@ -4,24 +4,27 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"format": "prettier . --cache --check --ignore-path .gitignore",
-		"format:fix": "pnpm run format --write",
+		"changeset:add": "changeset add",
+		"changeset:status": "changeset status --verbose",
+		"ci:release": "changeset publish",
+		"format:check": "prettier . --cache --check --ignore-path .gitignore",
+		"format:fix": "pnpm run format:check --write",
 		"prepare": "pnpm run setup",
 		"setup": "simple-git-hooks || exit 0",
-		"validate": "pnpm run format"
+		"validate": "pnpm run format:check"
 	},
 	"peerDependencies": {
 		"prettier": "2.x || 3.x"
 	},
 	"devDependencies": {
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.0",
 		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.0",
 		"simple-git-hooks": "^2.8.1"
 	},
 	"lint-staged": {
-		"*": [
-			"prettier --cache --write"
-		]
+		"*": "prettier --cache --ignore-unknown --write"
 	},
 	"prettier": "./index.js",
 	"simple-git-hooks": {
