@@ -2,7 +2,16 @@
 	"name": "@acdh-oeaw/prettier-config",
 	"version": "0.1.0",
 	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
 	"main": "index.js",
+	"types": "index.d.ts",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"packageManager": "pnpm@7.21.0",
 	"scripts": {
 		"changeset:add": "changeset add",
 		"changeset:status": "changeset status --verbose",
@@ -19,6 +28,7 @@
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
 		"@changesets/cli": "^2.26.0",
+		"@types/prettier": "^2.7.2",
 		"lint-staged": "^13.1.0",
 		"prettier": "^2.8.0",
 		"simple-git-hooks": "^2.8.1"
