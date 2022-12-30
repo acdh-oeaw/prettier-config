@@ -69,7 +69,7 @@ To auto-format on every Git commit, and to check formatting on every Git push, a
 		"format:fix": "npm run format:check -- --write",
 		"prepare": "npm run setup",
 		"setup": "simple-git-hooks || exit 0",
-		"validate": "npm run format"
+		"validate": "npm run format:check"
 	},
 	"lint-staged": {
 		"*": ["prettier --cache --write"]
