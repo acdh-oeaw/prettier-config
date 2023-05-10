@@ -11,12 +11,10 @@
 		"index.js",
 		"index.d.ts"
 	],
-	"packageManager": "pnpm@7.21.0",
+	"packageManager": "pnpm@8.5.0",
 	"scripts": {
-		"changeset:add": "changeset add",
-		"changeset:status": "changeset status --verbose",
 		"ci:release": "changeset publish",
-		"format:check": "prettier . --cache --check --ignore-path .gitignore",
+		"format:check": "prettier . --cache --check --ignore-path ./.gitignore",
 		"format:fix": "pnpm run format:check --write",
 		"prepare": "pnpm run setup",
 		"setup": "simple-git-hooks || exit 0",
@@ -27,10 +25,10 @@
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.0",
+		"@changesets/cli": "^2.26.1",
 		"@types/prettier": "^2.7.2",
-		"lint-staged": "^13.1.0",
-		"prettier": "^2.8.0",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.8",
 		"simple-git-hooks": "^2.8.1"
 	},
 	"lint-staged": {
