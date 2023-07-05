@@ -11,7 +11,7 @@
 		"index.js",
 		"index.d.ts"
 	],
-	"packageManager": "pnpm@8.5.0",
+	"packageManager": "pnpm@8.6.6",
 	"scripts": {
 		"ci:release": "changeset publish",
 		"format:check": "prettier . --cache --check --ignore-path ./.gitignore",
@@ -21,14 +21,14 @@
 		"validate": "pnpm run format:check"
 	},
 	"peerDependencies": {
-		"prettier": "2.x || 3.x"
+		"prettier": "3.x"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.1",
-		"@types/prettier": "^2.7.2",
-		"lint-staged": "^13.2.2",
-		"prettier": "^2.8.8",
+		"@changesets/cli": "^2.26.2",
+		"@types/prettier": "^2.7.3",
+		"lint-staged": "^13.2.3",
+		"prettier": "^3.0.0",
 		"simple-git-hooks": "^2.8.1"
 	},
 	"lint-staged": {

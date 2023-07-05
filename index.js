@@ -22,12 +22,6 @@ const config = {
 				rangeEnd: 0,
 			},
 		},
-		{
-			files: ["*.vue"],
-			options: {
-				htmlWhitespaceSensitivity: "ignore",
-			},
-		},
 	],
 };
 
