@@ -8,7 +8,7 @@
 		"index.js",
 		"index.d.ts"
 	],
-	"packageManager": "pnpm@8.6.9",
+	"packageManager": "pnpm@8.9.0",
 	"scripts": {
 		"changeset:add": "changeset add",
 		"changeset:status": "changeset status --verbose",
