@@ -23,8 +23,10 @@
 		"prettier": "2.x || 3.x"
 	},
 	"devDependencies": {
+		"@acdh-oeaw/commitlint-config": "^1.0.0",
 		"@changesets/changelog-github": "^0.5.0",
 		"@changesets/cli": "^2.27.1",
+		"@commitlint/cli": "^18.4.3",
 		"@types/prettier": "^2.7.3",
 		"is-ci": "^3.0.1",
 		"lint-staged": "^15.1.0",
@@ -37,6 +39,7 @@
 	},
 	"prettier": "./index.js",
 	"simple-git-hooks": {
+		"commit-msg": "pnpm exec commitlint --edit",
 		"pre-commit": "pnpm exec lint-staged",
 		"pre-push": "pnpm run validate"
 	}
