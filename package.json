@@ -2,13 +2,14 @@
 	"name": "@acdh-oeaw/prettier-config",
 	"version": "1.0.1",
 	"license": "MIT",
+	"type": "module",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"files": [
 		"index.js",
 		"index.d.ts"
 	],
-	"packageManager": "pnpm@8.11.0",
+	"packageManager": "pnpm@8.12.1",
 	"scripts": {
 		"changeset:add": "changeset add",
 		"changeset:status": "changeset status --verbose",
@@ -17,10 +18,11 @@
 		"format:fix": "pnpm run format:check --write",
 		"prepare": "run-s setup",
 		"setup": "is-ci || simple-git-hooks",
-		"validate": "run-p format:check"
+		"types:check": "tsc --noEmit",
+		"validate": "run-p format:check types:check"
 	},
 	"peerDependencies": {
-		"prettier": "2.x || 3.x"
+		"prettier": "3.x"
 	},
 	"devDependencies": {
 		"@acdh-oeaw/commitlint-config": "^1.0.0",
@@ -29,10 +31,14 @@
 		"@commitlint/cli": "^18.4.3",
 		"@types/prettier": "^2.7.3",
 		"is-ci": "^3.0.1",
-		"lint-staged": "^15.1.0",
+		"lint-staged": "^15.2.0",
 		"npm-run-all2": "^6.1.1",
-		"prettier": "^3.1.0",
-		"simple-git-hooks": "^2.9.0"
+		"prettier": "^3.1.1",
+		"simple-git-hooks": "^2.9.0",
+		"typescript": "^5.3.3"
+	},
+	"commitlint": {
+		"extends": "@acdh-oeaw/commitlint-config"
 	},
 	"lint-staged": {
 		"*": "prettier --cache --ignore-unknown --write"

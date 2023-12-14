@@ -1,2 +1,9 @@
+# dependencies
 node_modules/
+.pnpm-store/
+
+# logs
 *.log
+
+# misc
+.DS_Store
