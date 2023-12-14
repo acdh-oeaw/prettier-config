@@ -1,5 +1,12 @@
 # @acdh-oeaw/prettier-config
 
+## 2.0.0
+
+### Major Changes
+
+- [`2936410`](https://github.com/acdh-oeaw/prettier-config/commit/29364108bfdabe976837d7f024c49df9e2e47d4a)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - move config to esm, require prettier v3
+
 ## 1.0.1
 
 ### Patch Changes
