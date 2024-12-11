@@ -1,5 +1,12 @@
 # @acdh-oeaw/prettier-config
 
+## 2.0.1
+
+### Patch Changes
+
+- [`583ceb8`](https://github.com/acdh-oeaw/prettier-config/commit/583ceb8f8abee993777b61bf22f576550331117a)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add exports
+
 ## 2.0.0
 
 ### Major Changes
